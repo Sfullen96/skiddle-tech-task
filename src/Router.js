@@ -1,11 +1,14 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import App from './App';
+import { SearchContainer } from './components';
 
 const Router = () => (
   <Switch>
-    <Route exact path="/home" component={App} />
+    <Route exact path="/" component={SearchContainer} />
+    <Route exact path="/search" component={SearchContainer} />
+    <Route exact path="/event/:id" component={SearchContainer} />
+    <Route exact path="/artist/:id" component={SearchContainer} />
   </Switch>
 );
 
