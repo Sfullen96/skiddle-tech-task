@@ -14,7 +14,7 @@ import { getRequest } from '../helpers';
  */
 const search = async (keyword, offset = 0) => {
   try {
-    const { data } = await getRequest(Endpoints.SEARCH, { keyword, offset });
+    const { data } = await getRequest(Endpoints.SEARCH, {}, { keyword, offset });
     const { error, pagecount, results, totalcount } = data;
     return camelCaseKeys({
       error,

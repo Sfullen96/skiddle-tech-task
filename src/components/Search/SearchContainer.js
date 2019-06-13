@@ -41,8 +41,6 @@ const SearchContainer = () => {
    * @param {Number} nextPage - The next page, used to calculate offset
    */
   const doSearch = async (keyword, nextPage) => {
-    // Hide any results from a previous search
-    setShowResults(false);
     // Set the loading state
     setIsFetching(true);
     // Keep the search term in state to be used in displaying e.g.
@@ -113,8 +111,10 @@ const SearchContainer = () => {
    * @param {*} e - The event
    * @param {*} typeahead - The ref to the typeahead component
    */
-  const onKeyDown = (e, typeahead) => {
+  const onKeyDown = async (e, typeahead) => {
     if (e.keyCode === 13) {
+      setSearchTerm(e.target.value);
+      doSearch(e.target.value);
       // Manually blur the input
       typeahead.current.getInstance().blur();
       // Show the main results

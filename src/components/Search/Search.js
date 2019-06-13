@@ -59,7 +59,7 @@ const Search = ({
             // Must have typed 3 characters before attempting search
             // to avoid too many results
             minLength={3}
-            onChange={option => handleDropdownOptionSelection(option.id)}
+            onChange={option => handleDropdownOptionSelection(option[0].id)}
             placeholder="Search for Events..."
             id="search"
             delay={500} // How long after typing has stopped before searching
