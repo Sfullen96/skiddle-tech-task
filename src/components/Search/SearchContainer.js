@@ -91,9 +91,8 @@ const SearchContainer = () => {
    */
   const onSubmit = e => {
     e.preventDefault();
-    setSearchTerm(e.target.value);
-    if (e.target.value && e.target.value.length >= 1 && e.target.value !== '') {
-      doSearch(e.target.value);
+    if (searchTerm && searchTerm.length >= 1 && searchTerm !== '') {
+      doSearch(searchTerm);
       setShowResults(true);
       setSearchError(null);
     } else {
@@ -120,9 +119,8 @@ const SearchContainer = () => {
    */
   const onKeyDown = async (e, typeahead) => {
     if (e.keyCode === 13) {
-      setSearchTerm(e.target.value);
-      if (e.target.value && e.target.value.length >= 1 && e.target.value !== '') {
-        doSearch(e.target.value);
+      if (searchTerm && searchTerm.length >= 1 && searchTerm !== '') {
+        doSearch(searchTerm);
         // Manually blur the input
         typeahead.current.getInstance().blur();
         // Show the main results
@@ -133,6 +131,8 @@ const SearchContainer = () => {
       }
     }
   };
+
+  const onInputChange = value => setSearchTerm(value);
 
   return (
     <div className="search">
@@ -148,6 +148,7 @@ const SearchContainer = () => {
         handleDropdownOptionSelection={handleDropdownOptionSelection}
         onSubmit={onSubmit}
         onKeyDown={onKeyDown}
+        onInputChange={onInputChange}
         error={searchError}
       />
       {showResults && (

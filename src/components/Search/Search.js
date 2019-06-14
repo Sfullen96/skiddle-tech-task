@@ -21,6 +21,7 @@ const Search = ({
   handleDropdownOptionSelection,
   onSubmit,
   onKeyDown,
+  onInputChange,
   error,
 }) => {
   // Generate a ref to the typeahead comp so we can explicitly blur
@@ -72,6 +73,7 @@ const Search = ({
             maxResults={5}
             renderMenuItemChildren={option => generateMenuItem(option)}
             onKeyDown={e => onKeyDown(e, typeahead)}
+            onInputChange={value => onInputChange(value)}
             ref={typeahead}
           />
           <Button variant="outline-light" type="submit" className="search__input-container--submit">
@@ -113,6 +115,7 @@ Search.propTypes = {
   handleDropdownOptionSelection: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   onKeyDown: PropTypes.func.isRequired,
+  onInputChange: PropTypes.func.isRequired,
   error: PropTypes.string,
 };
 
