@@ -53,4 +53,5 @@ npm run start
 - `/src/App.js` - The main component
 
 ## Running tests
-`npm run test`
+- `npm run test`
+- `npm run lint` to check there's no ESlint issues
