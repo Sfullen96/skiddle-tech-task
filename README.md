@@ -16,9 +16,13 @@ cd skiddle-tech-task
 ```
 npm install
 ```
-### Copy .env.example into .env and change REACT_APP_API_KEY to a valid API Key
+### Copy the contents of `.env.example` to `.env` & add a valid API key to REACT_APP_API_KEY
 ```
+# Mac/Linux
 cp .env.example .env
+
+# Windows
+Manually create a .env file in the root folder and copy the contents of .env.example into it
 ```
 ### Run the start script
 ```
