@@ -1,68 +1,41 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Skiddle - Tech Task - Sam Fullen
+#### The technical task for Skiddle, by Sam Fullen
 
-## Available Scripts
+## Getting Started
+### Prerequisites
+- You must have a recent version of Node JS installed on your machine [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
+- You must also have npm installed on your machine [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm)
+- You must have git installed on your machine to clone the repository
+### Clone the repository [https://github.com/Sfullen96/skiddle-tech-task](https://github.com/Sfullen96/skiddle-tech-task)
+`git clone https://github.com/Sfullen96/skiddle-tech-task.git`
+### Navigate into the folder
+```
+cd skiddle-tech-task
+```
+### Install the node modules
+```
+npm install
+```
+### Run the start script
+```
+npm run start
+```
+---
+## Built With
+- [React JS](https://reactjs.org/)
+- [Create React App](https://github.com/facebook/create-react-app)
+- HTML/CSS/Jsx
+- [SASS](https://sass-lang.com/)
+- [Bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/) (with react-bootstrap [node module](https://react-bootstrap.netlify.com/))
+- [Jest](https://jestjs.io/)
+- [Enzyme](https://github.com/airbnb/enzyme) - For shallow render testing and snapshot tests
+- [ESLint](https://eslint.org/) - Using the prettier and AirBnb configs
+- [Prettier](https://prettier.io/)
+---
+## Directory Structure
+- All source code can be found in the /src directory
+- The /src/components holds all components
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Important Information
+- Do not push code directly to the master branch, checkout dev (`git checkout dev`), then branch off dev with a descriptivley named branch (`git checkout -b feature/login-page` for example).
+  - Once code is ready to be tested create a PR in Github to the dev branch. You can do this by navigating to the 'Pull Requests' tab [https://github.com/Sfullen96/spa-labour-exchange/pulls](https://github.com/Sfullen96/spa-labour-exchange/pulls) and clicking 'New Pull Request', choose `dev` as the base & your feature branch as the 'compare' branch

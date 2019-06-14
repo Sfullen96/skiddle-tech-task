@@ -16,6 +16,8 @@ describe('<ArtistDetails />', () => {
     );
   });
 
+  it('should match the snaphot', () => expect(wrapper).toMatchSnapshot());
+
   it('should render without crashing', () => {
     expect(wrapper.find('div').length).toEqual(1);
   });
