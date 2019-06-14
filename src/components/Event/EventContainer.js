@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 import './EventDetails.scss';
 
-import { Loader } from '..';
+import Loader from '../Loader/Loader';
 import { getEvent as getEventService } from '../../services';
 import EventDetails from './EventDetails';
 

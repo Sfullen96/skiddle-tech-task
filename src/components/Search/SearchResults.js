@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { Loader } from '..';
+import Loader from '../Loader/Loader';
 
 import SearchResult from './SearchResult';
 

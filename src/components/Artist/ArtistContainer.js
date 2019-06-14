@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 
 import './Artist.scss';
 
-import { Loader } from '..';
+import Loader from '../Loader/Loader';
 import { getArtist as getArtistService } from '../../services';
 import ArtistDetails from './ArtistDetails';
 
