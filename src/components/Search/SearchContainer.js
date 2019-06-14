@@ -22,6 +22,7 @@ const SearchContainer = () => {
   const [totalResults, setTotalResults] = useState(null);
   const [redirect, setRedirect] = useState(null);
   const [showResults, setShowResults] = useState(false);
+  const [searchError, setSearchError] = useState(null);
   const resultsPerPage = 20;
 
   // If state contains a redirect, send them to it
@@ -84,14 +85,20 @@ const SearchContainer = () => {
   /**
    * @function onSubmit
    *
-   * Triggered when a user presses the maginfying glass button, at this point
-   * there are already search results in state so we simply need to allow them
-   * to be shown by setting a variable in state
+   * Triggered when a user presses the maginfying glass button, search the
+   * API
    * @param {*} e - The event
    */
   const onSubmit = e => {
     e.preventDefault();
-    setShowResults(true);
+    setSearchTerm(e.target.value);
+    if (e.target.value && e.target.value.length >= 1 && e.target.value !== '') {
+      doSearch(e.target.value);
+      setShowResults(true);
+      setSearchError(null);
+    } else {
+      setSearchError('Please enter a value');
+    }
   };
 
   /**
@@ -114,11 +121,16 @@ const SearchContainer = () => {
   const onKeyDown = async (e, typeahead) => {
     if (e.keyCode === 13) {
       setSearchTerm(e.target.value);
-      doSearch(e.target.value);
-      // Manually blur the input
-      typeahead.current.getInstance().blur();
-      // Show the main results
-      setShowResults(true);
+      if (e.target.value && e.target.value.length >= 1 && e.target.value !== '') {
+        doSearch(e.target.value);
+        // Manually blur the input
+        typeahead.current.getInstance().blur();
+        // Show the main results
+        setShowResults(true);
+        setSearchError(null);
+      } else {
+        setSearchError('Please enter a value');
+      }
     }
   };
 
@@ -136,6 +148,7 @@ const SearchContainer = () => {
         handleDropdownOptionSelection={handleDropdownOptionSelection}
         onSubmit={onSubmit}
         onKeyDown={onKeyDown}
+        error={searchError}
       />
       {showResults && (
         <SearchResults

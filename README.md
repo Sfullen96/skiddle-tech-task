@@ -1,5 +1,5 @@
 # Skiddle - Tech Task - Sam Fullen
-The technical task for Skiddle, by Sam Fullen. The task took 4-5 hours to complete overall, including some tests on most of the components and mobile styling.
+The technical task for Skiddle, by Sam Fullen. The task includes some tests on most of the components and mobile styling.
 
 ## Getting Started
 ### Prerequisites

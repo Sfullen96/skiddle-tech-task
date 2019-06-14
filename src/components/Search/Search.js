@@ -21,6 +21,7 @@ const Search = ({
   handleDropdownOptionSelection,
   onSubmit,
   onKeyDown,
+  error,
 }) => {
   // Generate a ref to the typeahead comp so we can explicitly blur
   // when the enter key is pressed - see 'onKeyDown' func in SearchContainer.js
@@ -76,6 +77,7 @@ const Search = ({
           <Button variant="outline-light" type="submit" className="search__input-container--submit">
             <i className="fa fa-search" />
           </Button>
+          {error && <p className="search__error">{error}</p>}
         </Form>
       </div>
     </div>
@@ -84,6 +86,7 @@ const Search = ({
 
 Search.defaultProps = {
   searchResults: [],
+  error: null,
 };
 
 Search.propTypes = {
@@ -110,6 +113,7 @@ Search.propTypes = {
   handleDropdownOptionSelection: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,
   onKeyDown: PropTypes.func.isRequired,
+  error: PropTypes.string,
 };
 
 export default Search;
