@@ -22,7 +22,7 @@ npm install
 cp .env.example .env
 
 # Windows
-Manually create a .env file in the root folder and copy the contents of .env.example into it
+Manually create a .env file in the root folder and copy the contents of .env.example into it (Windows explorer might not let you create an empty .env file, so you can create it through git Bash or via the integrated CLI on an IDE)
 ```
 ### Run the start script
 ```
