@@ -1,5 +1,5 @@
 # Skiddle - Tech Task - Sam Fullen
-#### The technical task for Skiddle, by Sam Fullen
+The technical task for Skiddle, by Sam Fullen. The task took 4-5 hours to complete overall, including some tests on most of the components and mobile styling.
 
 ## Getting Started
 ### Prerequisites
@@ -16,6 +16,10 @@ cd skiddle-tech-task
 ```
 npm install
 ```
+### Copy .env.example into .env and change REACT_APP_API_KEY to a valid API Key
+```
+cp .env.example .env
+```
 ### Run the start script
 ```
 npm run start
@@ -31,11 +35,18 @@ npm run start
 - [Enzyme](https://github.com/airbnb/enzyme) - For shallow render testing and snapshot tests
 - [ESLint](https://eslint.org/) - Using the prettier and AirBnb configs
 - [Prettier](https://prettier.io/)
+- [Prop Types](https://www.npmjs.com/package/prop-types)
 ---
 ## Directory Structure
 - All source code can be found in the /src directory
 - The /src/components holds all components
+- `/src/__tests__` contains all tests
+- `/src/constants` contains constant variables, such as the API endpoints so they could be used across the code without redefining
+- `/src/helpers` contains the request helper which abstracts API request logic out of the components themselves
+- `/src/services` contains the API calls to abstract them from the components to avoid clutter, also allows for resusability for making the same API call from multiple components
+- `/src/Router.js` - Using React Router to allow navigation between routes
+- `/src/index.js` - The applications entry point
+- `/src/App.js` - The main component
 
-## Important Information
-- Do not push code directly to the master branch, checkout dev (`git checkout dev`), then branch off dev with a descriptivley named branch (`git checkout -b feature/login-page` for example).
-  - Once code is ready to be tested create a PR in Github to the dev branch. You can do this by navigating to the 'Pull Requests' tab [https://github.com/Sfullen96/spa-labour-exchange/pulls](https://github.com/Sfullen96/spa-labour-exchange/pulls) and clicking 'New Pull Request', choose `dev` as the base & your feature branch as the 'compare' branch
+## Running tests
+`npm run test`
