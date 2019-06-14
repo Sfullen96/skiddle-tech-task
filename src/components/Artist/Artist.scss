@@ -1,0 +1,27 @@
+@import '../../globals';
+
+.artist {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &__image {
+    border: 3px solid $primary-border;
+    width: 100%;
+  }
+  &__name {
+    font-weight: 800;
+    font-size: 32px;
+    margin-bottom: 0;
+  }
+  &__twitter {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  &__description {
+    max-height: 180px;
+    overflow: scroll;
+  }
+  &__preview {
+    width: 100%;
+  }
+}

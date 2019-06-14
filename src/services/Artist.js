@@ -4,15 +4,15 @@ import { Endpoints } from '../constants';
 import { getRequest } from '../helpers';
 
 /**
- * @function getEvent
+ * @function getArtist
  *
- * Fetch an event by its ID
+ * Fetch an artist by its ID
  *
  * @param {number} id
  */
-const getEvent = async id => {
+const getArtist = async id => {
   try {
-    const { data } = await getRequest(Endpoints.GET_EVENT, { id });
+    const { data } = await getRequest(Endpoints.GET_ARTIST, { id });
     const { results } = data;
     return camelCaseKeys(results);
   } catch (e) {
@@ -20,4 +20,4 @@ const getEvent = async id => {
   }
 };
 
-export default getEvent;
+export default getArtist;

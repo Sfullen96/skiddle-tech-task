@@ -99,3 +99,48 @@
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .search {
+    &__search-bar-container {
+      background-position-y: 0;
+      min-height: 200px;
+    }
+    &__input-container {
+      width: 90%;
+      &--logo {
+        width: 150px;
+      }
+      &--input {
+        width: 85%;
+      }
+      &--submit {
+        width: 15%;
+      }
+      &--menu-item {
+        p {
+          white-space: pre-line;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .search {
+    &__search-bar-container {
+      background-position-y: 0;
+    }
+    &__input-container {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .search {
+    &__search-bar-container {
+      background-position-y: 0;
+    }
+  }
+}

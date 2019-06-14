@@ -1,4 +1,5 @@
 import search from './Search';
 import getEvent from './Event';
+import getArtist from './Artist';
 
-export { search, getEvent };
+export { search, getEvent, getArtist };
