@@ -89,7 +89,9 @@ const EventDetails = ({
           <h2 className="event__artists-header">Artists</h2>
           <Row>
             {!artists.length ? (
-              <p>This is not a musical event</p>
+              <Col>
+                <p>This is not a musical event</p>
+              </Col>
             ) : (
               artists.map(artist => (
                 <Col xs="12" sm="4" md="3" key={artist.artistid}>

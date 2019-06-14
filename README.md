@@ -7,7 +7,7 @@ The technical task for Skiddle, by Sam Fullen. The task took 4-5 hours to comple
 - You must also have npm installed on your machine [https://www.npmjs.com/get-npm](https://www.npmjs.com/get-npm)
 - You must have git installed on your machine to clone the repository
 ### Clone the repository [https://github.com/Sfullen96/skiddle-tech-task](https://github.com/Sfullen96/skiddle-tech-task)
-`git clone https://github.com/Sfullen96/skiddle-tech-task.git`
+`git clone https://github.com/<YOUR_GITHUB_USERNAME>/skiddle-tech-task.git`
 ### Navigate into the folder
 ```
 cd skiddle-tech-task
