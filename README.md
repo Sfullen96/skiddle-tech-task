@@ -53,5 +53,5 @@ npm run start
 - `/src/App.js` - The main component
 
 ## Running tests
-- `npm run test`
+- `npm run test` - Tests may cache and it therefore might tell you there are no tests to run, if you see this message just press 'a'
 - `npm run lint` to check there's no ESlint issues
